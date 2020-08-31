@@ -6,38 +6,12 @@
 <body>
 
 <h1>Prediction Page</h1>
-<!-- <input type="text" id="prediction" name="val_predicted" value={{ data }}> -->
+<input type="text" id="prediction" name="val_predicted" value={{ data }}>
 <input type="text" id="prueba" name="prueba" value={{ valor_prueba }}>
-
-
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <span><u>TOP 10 - Recomendaciones para:</u> <b> {{ target }} </b></span>
-    <table style="width:30%" class="table table-striped">
-      <thead>
-        <tr>
-          <th>Pos</th>
-          <th>Pelicula</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for movie in data[0:10] %}
-        <tr>
-          <td>{{loop.index}}</td>
-          <td>{{movie}}</td>
-        </tr>                  
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- <ul> -->
- 	<!-- {% for movie in data %} -->
-    	<!-- <li>{{movie}}</li> -->
-	<!-- {% endfor %} -->
-<!-- </ul> -->
-
-
+{%if data %}
+<h1>hay info</h1>
+{%else%}
+<h1>no hay info</h1>
+{%endif%}
 </body>
 </html>
