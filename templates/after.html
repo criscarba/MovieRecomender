@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Prediction Page</h1>
+<!-- <input type="text" id="prediction" name="val_predicted" value={{ data }}> -->
+<input type="text" id="prueba" name="prueba" value={{ valor_prueba }}>
+
+
+<ul>
+ 	{% for movie in data %}
+    	<li>{{movie}}</li>
+	{% endfor %}
+</ul>
+
+
+</body>
+</html>
