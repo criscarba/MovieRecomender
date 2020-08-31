@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def inicio():
-    return render_template('movie_index.html')
+    return render_template('test.html')
 
 @app.route('/predict', methods=['POST'])
 def predecir():
@@ -28,7 +28,7 @@ def predecir():
 	#prediction = get_recommendations_load_model(val_to_predict)
     val_to_predict = 'hola'
     prediction = 'prediccion'
-	return render_template('movie_prediction.html', data=prediction, target=val_to_predict)
+	return render_template('after.html', data=prediction, target=val_to_predict)
 
 #Funcion de consumo del modelo
 #def get_recommendations_load_model(title):
