@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Basic 90</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css')}}" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Sistema de Recomendación de Peliculas</a></h1>
+      <h2>DIGITAL HOUSE - Trabajo Final - Grupo 1 </h2>
+    </div>
+    <form action="#" method="post">
+    </form>
+    <nav>
+      <ul>
+        <li><a href="#">Agustina Farias</a></li>
+        <li><a href="#">Alejandro Lewin</a></li>
+        <li><a href="#">Cristian Carballo</a></li>
+        <li><a href="#">Walter Canetti</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <span><u>TOP 10 - Recomendaciones para:</u> <b> {{ target }} </b></span>
+    <table style="width:30%" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Pos</th>
+          <th>Pelicula</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for movie in data[0:10] %}
+        <tr>
+          <td>{{loop.index}}</td>
+          <td>{{movie}}</td>
+        </tr>                  
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">  <a href="#"> </a></p>
+    <p class="fl_right">  <a target="_blank" href="" title=""></a></p>
+  </footer>
+</div>
+</body>
+</html>

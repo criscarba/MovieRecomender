@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Basic 90</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css')}}" type="text/css">
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Sistema de Recomendación de Peliculas</a></h1>
+      <h2>DIGITAL HOUSE - Trabajo Final - Grupo 1 </h2>
+    </div>
+    <form action="#" method="post">
+    </form>
+    <nav>
+      <ul>
+        <li><a href="#">Agustina Farias</a></li>
+        <li><a href="#">Alejandro Lewin</a></li>
+        <li><a href="#">Cristian Carballo</a></li>
+        <li><a href="#">Walter Canetti</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- Slider -->
+    <section id="slider" class="clear">
+      <figure><img src="{{ url_for('static', filename='images/Batman.png')}}" alt="">
+        <figcaption>
+          <h2>Sistema de Recomenación de Peliculas</h2>
+          <p></p>
+          <!-- <footer class="more"><a href="#">Read More &raquo;</a></footer> -->
+        </figcaption>
+      </figure>
+    </section>
+    <!-- main content -->
+    <div id="intro">
+      <section class="clear">
+        <!-- article 1 -->
+        <article class="two_quarter">
+          <h2>Seleccionar Pelicula</h2>
+            <form method="POST", action="{{url_for('predecir')}}">
+              <select name="pelicula" id="pelicula">
+                <optgroup label="Acción">
+                  <option value="The Dark Knight">The Dark Knight</option>
+                </optgroup>
+                <optgroup label="Aventura">
+                  <option value="Jumanji">Jumanji</option>
+                </optgroup>
+              </select>
+              <input type="submit" class="btn btn-primary" value="Predecir Similares">
+            </form>
+
+        </article>
+        <!-- article 2 -->
+        <article class="two_quarter lastbox">
+          <figure>
+            <ul class="clear">
+              <li><a href="#"><img src="{{ url_for('static', filename='images/Toystory.png')}}" width="130" height="130" alt=""></a></li>
+              <li><a href="#"><img src="{{ url_for('static', filename='images/Starwars.png')}}" width="130" height="130" alt=""></a></li>
+              <li class="last"><a href="#"><img src="{{ url_for('static', filename='images/Heat.png')}}" width="130" height="130" alt=""></a></li>
+            </ul>
+            <!-- <figcaption><a href="#">View Our Image Gallery Here &raquo;</a></figcaption> -->
+          </figure>
+        </article>
+      </section>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">  <a href="#"> </a></p>
+    <p class="fl_right">  <a target="_blank" href="" title=""></a></p>
+  </footer>
+</div>
+</body>
+</html>
