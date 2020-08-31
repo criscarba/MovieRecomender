@@ -10,11 +10,33 @@
 <input type="text" id="prueba" name="prueba" value={{ valor_prueba }}>
 
 
-<ul>
- 	{% for movie in data %}
-    	<li>{{movie}}</li>
-	{% endfor %}
-</ul>
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <span><u>TOP 10 - Recomendaciones para:</u> <b> {{ target }} </b></span>
+    <table style="width:30%" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Pos</th>
+          <th>Pelicula</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for movie in data[0:10] %}
+        <tr>
+          <td>{{loop.index}}</td>
+          <td>{{movie}}</td>
+        </tr>                  
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- <ul> -->
+ 	<!-- {% for movie in data %} -->
+    	<!-- <li>{{movie}}</li> -->
+	<!-- {% endfor %} -->
+<!-- </ul> -->
 
 
 </body>

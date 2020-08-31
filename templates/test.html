@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Sistema de Recomendación de Peliculas</h1>
+<p>Seleccione una pelicula.</p>
+<form method="POST", action="{{url_for('predecir')}}">
+  <select name="pelicula" id="pelicula">
+	<optgroup label="Acción">
+	  <option value="The Dark Knight">The Dark Knight</option>
+	</optgroup>
+	<optgroup label="Aventura">
+	  <option value="Jumanji">Jumanji</option>
+	</optgroup>
+  </select>
+  <input type="submit" class="btn btn-primary" value="Predecir Similares">
+</form>
+<!-- <form method="POST", action="{{url_for('home')}}"> -->
+  <!-- <label for="fname">Value:</label> -->
+  <!-- <input type="text" id="fname" name="val"> -->
+  <!-- <input type="submit" value="predict"> -->
+<!-- </form> -->
+</body>
+</html>
